@@ -9,8 +9,11 @@ function onFormSubmit(event) {
   const email = formElements.email.value;
   const password = formElements.password.value;
 
-  const formObj = { email, password };
-  console.log(formObj);
-
-  formEl.reset();
+  if (email == `` || password == ``) {
+    alert(`All information must be filled`);
+  } else {
+    const formObj = { email, password };
+    console.log(formObj);
+    formEl.reset();
+  }
 }
